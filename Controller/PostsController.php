@@ -40,7 +40,7 @@ class PostsController extends AppController {
 
       if ($this->request->is(array('post', 'put'))) {
         $this->Post->id = $id;
-        if ($this->Post->save($this->request-data)) {
+        if ($this->Post->save($this->request->data)) {
           $this->Flash->success(__('Your post has been updated.'));
           return $this->redirect(array('action' => 'index'));
         }
